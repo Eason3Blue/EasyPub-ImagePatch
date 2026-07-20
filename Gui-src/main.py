@@ -11,7 +11,7 @@ EXPECTED_SHA256 = "E5EC2B28E7E0CB5AB99A713B412E51B5EC761E6B9B29D09A239CDCCB5CE50
 class PatcherApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("EasyPub 补丁工具")
+        self.root.title("EasyPub 补丁工具 - Eason3Blue@吾爱破解")
         self.root.resizable(False, False)
 
         # 程序所在目录
