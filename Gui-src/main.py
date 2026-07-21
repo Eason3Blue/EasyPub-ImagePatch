@@ -3,6 +3,7 @@ import sys
 import hashlib
 import shutil
 import subprocess
+import webbrowser                     # 新增
 import tkinter as tk
 from tkinter import filedialog, messagebox
 
@@ -49,6 +50,11 @@ class PatcherApp:
         # ---- 应用补丁按钮 ----
         self.btn_apply = tk.Button(root, text="应用补丁", command=self.apply_patch, state="disabled", bg="#4CAF50", fg="white")
         self.btn_apply.grid(row=4, column=1, pady=15, sticky="w")
+
+        # ---- 项目主页链接（新增） ----
+        link_label = tk.Label(root, text="项目主页", fg="blue", cursor="hand2", font=("", 9, "underline"))
+        link_label.grid(row=5, column=0, columnspan=3, pady=(0, 10), sticky="e", padx=(0, 10))
+        link_label.bind("<Button-1>", lambda e: webbrowser.open_new("https://github.com/Eason3Blue/EasyPub-ImagePatch"))
 
         # 文件是否通过校验的标志
         self.sha256_ok = False
